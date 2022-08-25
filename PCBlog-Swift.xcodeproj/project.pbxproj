@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1C86F2028B7F642009EF317 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1E28B7F642009EF317 /* RestService.swift */; };
+		F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */; };
 		F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A528B43B8D00D31B24 /* AppDelegate.swift */; };
 		F1D046A828B43B8D00D31B24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */; };
 		F1D046AA28B43B8D00D31B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A928B43B8D00D31B24 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1C86F1E28B7F642009EF317 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 		F1D046A228B43B8D00D31B24 /* PCBlog-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PCBlog-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D046A528B43B8D00D31B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1C86F1B28B7F5F4009EF317 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1D046BB28B43D9300D31B24 /* Feed.swift */,
+				F1D046BD28B43DAD00D31B24 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1C86F1C28B7F5FE009EF317 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1D046A928B43B8D00D31B24 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F1C86F1D28B7F606009EF317 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */,
+				F1C86F1E28B7F642009EF317 /* RestService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		F1D0469928B43B8D00D31B24 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +92,12 @@
 		F1D046A428B43B8D00D31B24 /* PCBlog-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F1C86F1C28B7F5FE009EF317 /* Controllers */,
+				F1C86F1B28B7F5F4009EF317 /* Models */,
+				F1C86F1D28B7F606009EF317 /* Networking */,
 				F1D046A528B43B8D00D31B24 /* AppDelegate.swift */,
 				F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */,
-				F1D046A928B43B8D00D31B24 /* ViewController.swift */,
 				F1D046B928B43D2D00D31B24 /* feed.json */,
-				F1D046BB28B43D9300D31B24 /* Feed.swift */,
-				F1D046BD28B43DAD00D31B24 /* Item.swift */,
 				F1D046AB28B43B8D00D31B24 /* Main.storyboard */,
 				F1D046AE28B43B8F00D31B24 /* Assets.xcassets */,
 				F1D046B028B43B8F00D31B24 /* LaunchScreen.storyboard */,
@@ -153,6 +183,8 @@
 				F1D046BC28B43D9300D31B24 /* Feed.swift in Sources */,
 				F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */,
 				F1D046A828B43B8D00D31B24 /* SceneDelegate.swift in Sources */,
+				F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */,
+				F1C86F2028B7F642009EF317 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
