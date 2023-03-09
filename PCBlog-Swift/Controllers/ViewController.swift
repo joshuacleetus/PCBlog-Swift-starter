@@ -13,17 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print (Feed.getFeed() ?? "nothing")
-        
-        let urlString = "https://www.personalcapital.com/blog/wp-content/uploads/2021/12/year-end-checklist-small-business-owners-400x222.png"
-        self.imageDownloadService.downloadFromURL(url: urlString, success: { image in
-            print("Got the image size: \(image.size)")
-        }, failure: { errorText in
-            print(errorText)
-        })
+        // Replace everything with your own code
         self.view.backgroundColor = .cyan
+
+        if let feed = Feed.getFeed() {
+            if let imageURL = feed.items.first?.featured_image {
+                self.imageDownloadService.downloadFromURL(url: imageURL, success: { image in
+                    print("Got the image size: \(image.size)")
+                    print("The world is good!")
+                }, failure: { errorText in
+                    print(errorText)
+                })
+            } else {
+                print ("Err: Can not get the URL string")
+            }
+        } else {
+            print ("Err: Can not get the feed")
+        }
     }
-
-
 }
 

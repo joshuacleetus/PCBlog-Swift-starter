@@ -7,7 +7,7 @@
 
 import Foundation
 
-// https://www.personalcapital.com/blog/category/whitepapers/feed/json
+// https://www.personalcapital.com/blog/feed/json
 
 struct Feed: Codable {
     let title: String
