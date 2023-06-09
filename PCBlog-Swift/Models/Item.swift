@@ -9,15 +9,11 @@ import Foundation
 
 struct Item: Codable {
     let id: String
-    let url: String
-    let category: String
-    let categories: [String]
     let title: String
-    let encoded_title: String
-    let featured_image: String
     let summary: String
-    let insight_summary: String
+    let url: String
+    let content_html: String
     let author: [String:String]
-    let authors: [String]
-    let tags: [String]
+    let date_published: String
+    let featured_image: String
 }

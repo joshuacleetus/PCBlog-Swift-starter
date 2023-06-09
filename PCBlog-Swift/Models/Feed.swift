@@ -7,7 +7,7 @@
 
 import Foundation
 
-// https://www.personalcapital.com/blog/feed/json
+// https://www.empower.com/api/blog/json
 
 struct Feed: Codable {
     let title: String
@@ -32,7 +32,7 @@ struct Feed: Codable {
                                                        from: jsonData)
             return decodedData
         } catch {
-            print("decode error")
+            print("Decode error: \(error)")
             return nil
         }
     }
