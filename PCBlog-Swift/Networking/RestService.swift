@@ -9,17 +9,9 @@ import Foundation
 
 /*
  ..............................................................................................
- Barebone impletation without unit testing
+ Barebone impletation without unit testing, or abiblity to cancel a request.
  Most likely, a full app would download specialized date such as images or videos.
  In that case, this service would expand to include those specific functions
-
- Timing out a GET request would be very useful
- when Internet connection is not possible.
- A timeout signal would alert the user that something is wrong with connectivity, and
- not with the application itself.
-
- A "Cancel" request would also be useful when the controller issuing the original request
- no longer cares about the result. Perhaps, placing all these requests in a queue would be useful.
 
  This service is re-entrant. So multiple simultaneous requests are possible
  ..............................................................................................
