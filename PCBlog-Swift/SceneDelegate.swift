@@ -19,8 +19,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
           
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
+        window.rootViewController = EmpowerHomeViewController()
         window.makeKeyAndVisible()
+        // Check if the device is iPad and in a regular horizontal size class
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let splitViewController = UISplitViewController()
+            let masterViewController = EmpowerHomeViewController()
+            let detailViewController = EmpowerItemDetailViewController(item: Item(
+                id: "",
+                title: "",
+                summary: "",
+                url: "",
+                content_html: "",
+                author: [:],
+                date_published: "",
+                featured_image: ""
+            ))
+            let detailNavigationController = UINavigationController(rootViewController: detailViewController)
+
+            splitViewController.viewControllers = [masterViewController, detailNavigationController]
+            // Ensure the split view always shows both master and detail view controllers on iPad
+            splitViewController.preferredDisplayMode = UISplitViewController.DisplayMode.oneBesideSecondary
+            window.rootViewController = splitViewController
+            window.makeKeyAndVisible()
+        } else {
+            // For iPhone or iPad in compact horizontal size class
+            let masterViewController = EmpowerHomeViewController()
+            let navigationController = UINavigationController(rootViewController: masterViewController)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
         self.window = window
     }
 

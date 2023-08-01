@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791C9C4F2A7440470017F7ED /* EmpowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */; };
+		791C9C512A771BC20017F7ED /* EmpowerItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */; };
+		791C9C532A771E6D0017F7ED /* EmpowerHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C522A771E6D0017F7ED /* EmpowerHomeViewModel.swift */; };
+		791C9C552A774C260017F7ED /* ItemDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C542A774C260017F7ED /* ItemDecorationView.swift */; };
 		F1C86F2028B7F642009EF317 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1E28B7F642009EF317 /* RestService.swift */; };
 		F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */; };
 		F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A528B43B8D00D31B24 /* AppDelegate.swift */; };
 		F1D046A828B43B8D00D31B24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */; };
-		F1D046AA28B43B8D00D31B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A928B43B8D00D31B24 /* ViewController.swift */; };
+		F1D046AA28B43B8D00D31B24 /* EmpowerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A928B43B8D00D31B24 /* EmpowerHomeViewController.swift */; };
 		F1D046AD28B43B8D00D31B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D046AB28B43B8D00D31B24 /* Main.storyboard */; };
 		F1D046AF28B43B8F00D31B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D046AE28B43B8F00D31B24 /* Assets.xcassets */; };
 		F1D046B228B43B8F00D31B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D046B028B43B8F00D31B24 /* LaunchScreen.storyboard */; };
@@ -21,12 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerItemCell.swift; sourceTree = "<group>"; };
+		791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerItemDetailViewController.swift; sourceTree = "<group>"; };
+		791C9C522A771E6D0017F7ED /* EmpowerHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerHomeViewModel.swift; sourceTree = "<group>"; };
+		791C9C542A774C260017F7ED /* ItemDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecorationView.swift; sourceTree = "<group>"; };
 		F1C86F1E28B7F642009EF317 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 		F1D046A228B43B8D00D31B24 /* PCBlog-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PCBlog-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D046A528B43B8D00D31B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1D046A928B43B8D00D31B24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1D046A928B43B8D00D31B24 /* EmpowerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerHomeViewController.swift; sourceTree = "<group>"; };
 		F1D046AC28B43B8D00D31B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1D046AE28B43B8F00D31B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1D046B128B43B8F00D31B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,7 +67,11 @@
 		F1C86F1C28B7F5FE009EF317 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1D046A928B43B8D00D31B24 /* ViewController.swift */,
+				F1D046A928B43B8D00D31B24 /* EmpowerHomeViewController.swift */,
+				791C9C522A771E6D0017F7ED /* EmpowerHomeViewModel.swift */,
+				791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */,
+				791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */,
+				791C9C542A774C260017F7ED /* ItemDecorationView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,13 +190,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791C9C4F2A7440470017F7ED /* EmpowerItemCell.swift in Sources */,
+				791C9C532A771E6D0017F7ED /* EmpowerHomeViewModel.swift in Sources */,
 				F1D046BE28B43DAD00D31B24 /* Item.swift in Sources */,
-				F1D046AA28B43B8D00D31B24 /* ViewController.swift in Sources */,
+				791C9C552A774C260017F7ED /* ItemDecorationView.swift in Sources */,
+				F1D046AA28B43B8D00D31B24 /* EmpowerHomeViewController.swift in Sources */,
 				F1D046BC28B43D9300D31B24 /* Feed.swift in Sources */,
 				F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */,
 				F1D046A828B43B8D00D31B24 /* SceneDelegate.swift in Sources */,
 				F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */,
 				F1C86F2028B7F642009EF317 /* RestService.swift in Sources */,
+				791C9C512A771BC20017F7ED /* EmpowerItemDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
