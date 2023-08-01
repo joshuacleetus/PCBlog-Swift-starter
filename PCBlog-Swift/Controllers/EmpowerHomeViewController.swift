@@ -71,7 +71,6 @@ extension EmpowerHomeViewController: UICollectionViewDataSource {
 }
 
 private extension EmpowerHomeViewController {
-    
     func createCollectionViewLayout() -> UICollectionViewCompositionalLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
 
