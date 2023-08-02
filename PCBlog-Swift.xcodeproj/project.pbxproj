@@ -10,6 +10,8 @@
 		791C9C4F2A7440470017F7ED /* EmpowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */; };
 		791C9C512A771BC20017F7ED /* EmpowerItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */; };
 		791C9C532A771E6D0017F7ED /* EmpowerHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C522A771E6D0017F7ED /* EmpowerHomeViewModel.swift */; };
+		791C9C792A7A0B000017F7ED /* CompositionalCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C782A7A0B000017F7ED /* CompositionalCollectionViewViewController.swift */; };
+		791C9C7C2A7A1F030017F7ED /* NSDirectionalEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C9C7B2A7A1F030017F7ED /* NSDirectionalEdgeInsets+Extension.swift */; };
 		F1C86F2028B7F642009EF317 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1E28B7F642009EF317 /* RestService.swift */; };
 		F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */; };
 		F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D046A528B43B8D00D31B24 /* AppDelegate.swift */; };
@@ -27,6 +29,8 @@
 		791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerItemCell.swift; sourceTree = "<group>"; };
 		791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerItemDetailViewController.swift; sourceTree = "<group>"; };
 		791C9C522A771E6D0017F7ED /* EmpowerHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerHomeViewModel.swift; sourceTree = "<group>"; };
+		791C9C782A7A0B000017F7ED /* CompositionalCollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalCollectionViewViewController.swift; sourceTree = "<group>"; };
+		791C9C7B2A7A1F030017F7ED /* NSDirectionalEdgeInsets+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
 		F1C86F1E28B7F642009EF317 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		F1C86F1F28B7F642009EF317 /* ImageDownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 		F1D046A228B43B8D00D31B24 /* PCBlog-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PCBlog-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,30 +65,39 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		791C9C772A7940EB0017F7ED /* CollectionViewCells */ = {
+		791C9C772A7940EB0017F7ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				791C9C4E2A7440470017F7ED /* EmpowerItemCell.swift */,
 			);
-			path = CollectionViewCells;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		F1C86F1B28B7F5F4009EF317 /* Models */ = {
+		791C9C7A2A7A1EDA0017F7ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				791C9C7B2A7A1F030017F7ED /* NSDirectionalEdgeInsets+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1C86F1B28B7F5F4009EF317 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F1D046BB28B43D9300D31B24 /* Feed.swift */,
 				F1D046BD28B43DAD00D31B24 /* Item.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F1C86F1C28B7F5FE009EF317 /* Controllers */ = {
+		F1C86F1C28B7F5FE009EF317 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F1D046A928B43B8D00D31B24 /* EmpowerHomeViewController.swift */,
 				791C9C502A771BC20017F7ED /* EmpowerItemDetailViewController.swift */,
+				791C9C782A7A0B000017F7ED /* CompositionalCollectionViewViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F1C86F1D28B7F606009EF317 /* Networking */ = {
@@ -115,10 +128,11 @@
 		F1D046A428B43B8D00D31B24 /* PCBlog-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				791C9C772A7940EB0017F7ED /* CollectionViewCells */,
+				791C9C7A2A7A1EDA0017F7ED /* Extensions */,
+				791C9C772A7940EB0017F7ED /* Views */,
 				791C9C762A7940C40017F7ED /* ViewModels */,
-				F1C86F1C28B7F5FE009EF317 /* Controllers */,
-				F1C86F1B28B7F5F4009EF317 /* Models */,
+				F1C86F1C28B7F5FE009EF317 /* ViewControllers */,
+				F1C86F1B28B7F5F4009EF317 /* Model */,
 				F1C86F1D28B7F606009EF317 /* Networking */,
 				F1D046A528B43B8D00D31B24 /* AppDelegate.swift */,
 				F1D046A728B43B8D00D31B24 /* SceneDelegate.swift */,
@@ -211,8 +225,10 @@
 				F1D046A628B43B8D00D31B24 /* AppDelegate.swift in Sources */,
 				F1D046A828B43B8D00D31B24 /* SceneDelegate.swift in Sources */,
 				F1C86F2128B7F642009EF317 /* ImageDownloadService.swift in Sources */,
+				791C9C7C2A7A1F030017F7ED /* NSDirectionalEdgeInsets+Extension.swift in Sources */,
 				F1C86F2028B7F642009EF317 /* RestService.swift in Sources */,
 				791C9C512A771BC20017F7ED /* EmpowerItemDetailViewController.swift in Sources */,
+				791C9C792A7A0B000017F7ED /* CompositionalCollectionViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

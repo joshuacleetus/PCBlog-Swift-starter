@@ -9,7 +9,7 @@ import UIKit
 
 class EmpowerHomeViewModel {
     var feedTitle: String = ""
-    private var items: [Item] = []
+    var items: [Item] = []
     private let imageService: ImageDownloadService // A service to fetch image from the server
 
     init(imageService: ImageDownloadService) {

@@ -20,6 +20,12 @@ class EmpowerItemCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.titleLabel.text = ""
+        self.imageView.image = nil
+    }
 
     private func setupViews() {
         // Configure the cell UI components
