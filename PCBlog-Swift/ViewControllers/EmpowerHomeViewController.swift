@@ -33,10 +33,12 @@ class EmpowerHomeViewController: CompositionalCollectionViewViewController {
         super.viewDidLoad()
             
         self.view.backgroundColor = .white
+        // set up collection view
         collectionView.contentInset.bottom = 50
         collectionView.register(EmpowerItemCell.self, forCellWithReuseIdentifier: EmpowerItemCell.reuseIdentifier)
         collectionView.delegate = self
 
+        // fetch the feed items
         self.fetchFeedItems()
     }
     
@@ -79,13 +81,12 @@ private extension EmpowerHomeViewController {
 extension EmpowerHomeViewController {
     // Create your collection view layout
     private func layoutSection(forIndex index: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        // approximate width we want to base our calculations on
-        let desiredWidth: CGFloat = 300
-        
-        let itemCount = environment.container.effectiveContentSize.width / desiredWidth
-        
-        let fractionWidth: CGFloat = 1 / (itemCount.rounded())
-        
+        //items count per row
+        let itemCount = environment.traitCollection.horizontalSizeClass == .compact ? 2 : 3
+
+        // get width of item
+        let fractionWidth: CGFloat = 1 / CGFloat(itemCount)
+
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fractionWidth), heightDimension: .fractionalHeight(1.0))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -117,6 +118,7 @@ extension EmpowerHomeViewController: UICollectionViewDelegate {
         openWebviewFor(item: item)
     }
     
+    // open webview on cell selection
     func openWebviewFor(item: Item) {
         let svc = SFSafariViewController(url: URL(string: item.url)!)
         present(svc, animated: true, completion: nil)
